@@ -38,6 +38,8 @@ public class Main {
         }
     }
 
+    //Doubles output
+    //Method Overload
     private static void printDoubled(ArrayList<Integer> n){
         for (Integer i : n){
             System.out.println(i * 2); // i  times 2 as and Integer Cast
