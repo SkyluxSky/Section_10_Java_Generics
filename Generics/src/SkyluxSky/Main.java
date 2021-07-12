@@ -8,6 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        System.out.println("Raw Type ArrayList");
         //Raw Type ArrayList - Never use raw types
         ArrayList items = new ArrayList();
         items.add(1);
@@ -17,14 +18,17 @@ public class Main {
         items.add(5);
         //items.add("Hello"); //Exception - String cannot be cast to Integer
 
-        //printDoubled(items);
+        printDoubled(items);
+        System.out.println("\n");
 
-
+        System.out.println("ArrayList With Types");
         //Parametized Type - Using Generics
         ArrayList<Integer> intList = new ArrayList<>();
         intList.add(1);
-        intList.add(11);
-        intList.add(111);
+        intList.add(2);
+        intList.add(3);
+        intList.add(4);
+        intList.add(5);
 
 
         printDoubled(intList);
