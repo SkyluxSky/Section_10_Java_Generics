@@ -8,7 +8,9 @@ import java.util.List;
 //Sets up a Default type that can be reassigned
 //using the extends keyword allows us to restrict T to only accept a certain class
 //Accepts any class that is Player or Extends Player(Player is the upper bound)
-public class Team<T extends Player> {
+
+//---Implements Comparable Interface - In addition pass team<T> to classify desired team type
+public class Team<T extends Player> implements Comparable<Team<T>>{
     //Fields
     private String name; //Name of the team
     int played = 0; //Games Played
@@ -72,5 +74,17 @@ public class Team<T extends Player> {
 
     public int ranking(){
         return (won * 2) + tied;
+    }
+
+    //Implements compareTo Method:
+    @Override
+    public int compareTo(Team<T> team) {
+        if (this.ranking() > team.ranking()){
+            return -1;
+        } else if (this.ranking() < team.ranking()){
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }
